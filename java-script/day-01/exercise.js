@@ -53,7 +53,7 @@ console.log(Number(hoursPerDayStr) * 7);
 
 //Logical operators & comparision Exersize
 
-//Exersize 1
+//Exercise 1
 
 const ageNumber = 19;
 
@@ -68,14 +68,14 @@ console.log(hoursPerDayNumber >= 6);
 
 console.log(ageNumber >= 18 && hoursPerDayNumber >= 6);
 
-console.log(isLearning === false);
+console.log(!isLearning);
 
-//Exersize 2
+//Exercise 2
 
-const Ready = 
+const ready = 
             ageNumber >= 18 &&
             hoursPerDayNumber >= 6 &&
-            isLearning ===true;
+            isLearning;
 
 console.log(Ready);
 
@@ -89,9 +89,9 @@ const hasGitHub = true;
 
 const knowingEnglish = false;
 
-console.log(ageNumber2 >= 18 && hoursPerDayNumber2 >= 6 && hasGitHub === true );
+console.log(ageNumber2 >= 18 && hoursPerDayNumber2 >= 6 && hasGitHub);
 
-console.log(hasGitHub === true || knowingEnglish === true);
+console.log(hasGitHub || knowingEnglish);
 
 
 

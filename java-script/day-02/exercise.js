@@ -138,3 +138,32 @@ if (hasETH || hasUSDC) {
     console.log("Need ETH or USDC");
     
 }
+
+let isBusy = false;
+let hasTask = true;
+
+if (!isBusy && hasTask) {
+    
+    console.log("Ready to work");
+    
+} else {
+
+    console.log("Not ready");
+    
+}
+
+let age = 19;
+let hasWallet = true;
+let hasETH = false;
+let hasUSDC = true;
+let isBanned = false;
+
+if (age >= 18 && hasWallet && (hasETH || hasUSDC) && !isBanned) {
+    
+    console.log("Access granted");
+    
+} else {
+
+    console.log("Access denied");
+    
+}
