@@ -87,7 +87,7 @@ for (let i = 0; i < technologies1.length; i++) {
     
     console.log(technologies1[i]);
     
-}
+};
 
 let technologies2 = [
     "JavaScript",
@@ -103,12 +103,112 @@ for (let i = 0; i < technologies2.length; i++) {
         
         console.log(technologies2[i]);
         
+    };
+    
+};
+
+
+let technologies3 = [
+    "JavaScript",
+    "Solidity",
+    "Git",
+    "GitHub",
+    "Web3"
+];
+
+for (let i = 0; i < technologies3.length; i++) {
+    
+    if (technologies3[i] === "Git" || technologies3[i] === "GitHub") {
+        
+        console.log(technologies3[i]);
+        
     }
+}
+
+let technologies4 = [
+    "JavaScript",
+    "Solidity",
+    "Git",
+    "GitHub",
+    "Web3"
+];
+
+let count = 0
+
+for (let i = 0; i < technologies4.length; i++) {
+
+    if (technologies4[i] === "Git" || technologies4[i] === "GitHub") {
+        
+        count++;
+    }
+}
+
+console.log(count);
+
+
+let technologies5 = [
+    "JavaScript",
+    "Git",
+    "Solidity",
+    "Web3",
+    "Python"
+];
+
+for (let i = 0; i < technologies5.length; i++) {
+    
+    if (technologies5[i] === "Solidity") {
+        
+        console.log("Solidity found");
+        
+        break;
+    }
+}
+
+
+let technologies6 = [
+    "JavaScript",
+    "Solidity",
+    "Git",
+    "Python",
+    "Web3"
+];
+
+for (let i = 0; i < technologies6.length; i++) {
+    
+    if (technologies6[i] === "Python") {
+        continue;
+    }
+
+    console.log(technologies6[i]);
     
 }
 
 
+let technologies7 = [
+    "JavaScript",
+    "Solidity",
+    "Python",
+    "Git",
+    "Python",
+    "Web3"
+];
 
+let count1 = 0;
 
+for (let i = 0; i < technologies7.length; i++) {
+    
+    if (technologies7[i] === "Python") {
+        
+        continue;
+
+    }
+
+    console.log(technologies7[i]);
+
+    count1++;
+    
+}
+
+console.log(count1);
 
  
