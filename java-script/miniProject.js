@@ -1,12 +1,3 @@
-function checkDeveloper(developer) {
-
-    if (developer.age >= 18) {
-        return "Approved";
-    } else {
-        return "Rejected";
-    }
-}
-
 let developers = [
     {
         name: "Mohammad",
@@ -30,8 +21,13 @@ let developers = [
     }
 ];
 
-for (let i = 0; i < developers.length; i++) {
+let result = developers
+    .filter(function(developer) {
+        return developer.age >= 18 && developer.skill !== "JavaScript";
+    })
+    .map(function(developer) {
+        return developer.name;
+    })
+
+    console.log(result);
     
-    console.log(`${developers[i].name} - ${developers[i].skill} - ${checkDeveloper(developers[i])}`);
-    
-}

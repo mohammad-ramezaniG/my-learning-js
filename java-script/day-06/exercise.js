@@ -80,13 +80,49 @@ let developers = [
 
 ]
 
+function checkDeveloper(developer) {
+    
+    if (developer.age >= 18) {
+        
+        return "Approved";
+        
+    } else {
+
+        return "Rejected";
+        
+    }
+}
+
+for (let i = 0; i < developers.length; i++) {
+    
+        console.log(checkDeveloper(developers[i]));
+        
+}
+
+
 for (let i = 0; i < developers.length; i++) {
 
-    if (developers[i].age > 18) {
+    if (developers[i].age >= 18) {
         
         console.log(`${developers[i].name} - ${developers[i].skill}`);
         
     }
     
 }
+
+
+function createDeveloper3(name , age , skill) {
+    
+    return {
+        name: name,
+        age: age,
+        skill: skill
+    };
+}
+
+let developer6 = createDeveloper3( "Mohammad" , 19 , "Smart contract");
+
+console.log(developer.name);
+console.log(developer.skill);
+
 

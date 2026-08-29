@@ -1,0 +1,129 @@
+let technologies = [
+    "javaScript",
+    "Solidity",
+    "Git",
+    "Web3"
+]
+
+technologies.forEach(function(technologie) {
+    
+    console.log(technologie);
+    
+});
+
+
+let developers = [
+    {
+        name: "Mohammad",
+        skill: "Smart Contract"
+    },
+    {
+        name: "Ali",
+        skill: "Solidity"
+    },
+    {
+        name: "Narges",
+        skill: "DeFi"
+    }
+];
+
+developers.forEach(function(developer) {
+    
+    console.log(developer.name);
+    
+});
+
+let developers2 = [
+    {
+        name: "Mohammad",
+        age: 19,
+        skill: "Smart Contract"
+    },
+    {
+        name: "Ali",
+        age: 21,
+        skill: "Solidity"
+    },
+    {
+        name: "Narges",
+        age: 17,
+        skill: "DeFi"
+    },
+    {
+        name: "Reza",
+        age: 16,
+        skill: "JavaScript"
+    }
+];
+
+function checkDeveloper(developer) {
+
+    if (developer.age >= 18) {
+        return "Approved";
+    } else {
+        return "Rejected";
+    }
+}
+
+
+developers2.forEach(function(developer) {
+    
+        console.log(`${developer.name} - ${checkDeveloper(developer)}`);
+        
+});
+
+
+let count = 0;
+
+developers2.forEach(function(developer) {
+    
+    if (developer.age >= 18) {
+        
+        count++;
+
+    }
+})
+
+console.log(count);
+
+
+let skills = [
+    "JavaScript",
+    "Solidity",
+    "Git"
+];
+
+
+let learning = skills.map(function(skill) {
+    return `${skill} - learning`
+})
+
+
+let names = developers2.map(function(developer) {
+    
+    return developer.name;
+})
+
+console.log(names);
+
+let profile = developers2.map(function(developer) {
+    
+    return {
+        name: developer.name,
+        role: "Developer"
+    }
+})
+
+let nextYearAges = developers2.map(function(developer) {
+    return developer.age + 1;
+});
+
+console.log(nextYearAges);
+
+
+let adultDevelopers = developers2.filter(function(developer) {
+    
+    return developer.age >=18 ;
+})
+
+console.log(adultDevelopers);
