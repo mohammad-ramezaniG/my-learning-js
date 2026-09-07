@@ -1,9 +1,18 @@
-let developer = 19;
+let developers = [
+    {
+        name: "Mohammad",
+        skills: ["JavaScript", "Solidity"]
+    }
+];
 
-try {
-    developer.push("Solidity");
-} catch (error) {
-    
+function getSkill(index) {
+    try {
+        return developers[index].skills[1].toUpperCase();
+    } catch (error) {
+        console.log(error.message);
+    } finally {
+        console.log("Finished");
+    }
 }
 
-console.log("Program continues...");
+console.log(getSkill(2));
