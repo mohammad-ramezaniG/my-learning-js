@@ -127,3 +127,31 @@ let adultDevelopers = developers2.filter(function(developer) {
 })
 
 console.log(adultDevelopers);
+
+
+let approvedDevelopers = developers2.filter(function(developer) {
+    
+    return developer.age >= 18 && developer.skill !== "JavaScript";
+})
+
+console.log(approvedDevelopers);
+
+let solidityDeveloper = developers2.find(function(developer) {
+    
+    return developer.skill === "Solidity";
+})
+
+console.log(solidityDeveloper);
+
+
+let adultNames = developers2
+    .filter(function(developer) {
+        return developer.age >= 18;
+    })
+    .map(function(developer) {
+        return developer.name;
+    });
+
+console.log(adultNames);
+
+

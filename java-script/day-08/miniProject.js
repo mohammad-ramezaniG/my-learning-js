@@ -38,7 +38,6 @@ function upgradeDeveloper({name , skills} , ...newSkills) {
 
 }
 
-upgradeDeveloper(developer1 , "Web3" , "Git")
 
 let call = upgradeDeveloper(developer1 , "Web3" , "Git");
 
