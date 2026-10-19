@@ -105,39 +105,58 @@
 
         <h2 >My projects</h2>
 
+        <div class="projects-container">
+
+    <div class="project-card">
+        <small class="project-status">New</small>
+        <h3>My First Website</h3>
+        <p>A personal website built with HTML and CSS.</p>
+        <span>HTML · CSS</span>
+    </div>
+
+    <div class="project-card">
+        <h3>JavaScript Practice</h3>
+        <p>Small projects to practice JavaScript fundamentals.</p>
+        <span>JavaScript</span>
+    </div>
+
+    <div class="project-card">
+        <h3>Smart Contract Project</h3>
+        <p>A future project to practice Solidity and Ethereum.</p>
+        <span>Solidity · Web3</span>
+    </div>
+
+</div>
+
     </section>
     <section id="images">
-        <h2>Images</h2>
-    
-        <img 
-        src="images/Image.jpg" 
-        alt="Simple image"
-        width="300"
-        ><br>
-    <a href="index.html">
-    <img
-        src="images/Image.jpg"
-        alt="Go to my WebSite"
-        width="200"
-    >
-    </a>
-    <p>Image with link</p>
+    <h2>My Images</h2>
+
+    <div class="gallery">
+        <img src="images/photo1.jpg" alt="My first image">
+        <img src="images/photo2.jpg" alt="My second image">
+        <img src="images/photo3.jpg" alt="My third image">
+    </div>
     </section>
 
     <section id="contact">
 
         <h2>Contact me</h2>
     
-    <form>
-        <label for="name">Name:</label>
-        <input
-        type="text"
-        id="name"
-        name="name"
-        oninput="removeNumbers()"
-        required
-        placeholder="Mohammad Ramezani"
-    >
+    <form action="contact" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input
+            type="text"
+            id="name"
+            name="name"
+            oninput="removeNumbers()"
+            minlength="3"
+            maxlength="40"
+            required
+            placeholder="Mohammad Ramezani"
+        >
 
         <label for="email">Email:</label>
         <input
@@ -149,19 +168,29 @@
         >
 
         <label for="age">Age</label>
-        <input type="number" id="age" name="age" min="1" max="120">
+        <input type="number" id="age" name="age" min="18" max="100" required>
 
-        <label for="birthday">Birthday</label>
-        <input type="date" id="birthday" name="birthday">
+        </fieldset>
+        
+        <fieldset>
 
-        <label for="message">Message:</label>
-        <textarea
-            id="message"
-            name="message"
-            placeholder="Write your message..."
-            rows="5"
-            required
-        ></textarea>
+            <legend>Additional Information</legend>
+
+            <label for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <label for="message">Message:</label>
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message..."
+                rows="5"
+                required
+        >   </textarea>
+
+        </fieldset>
+
+        
 
         <button type="submit">Send</button>
 </form>
