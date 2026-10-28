@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Task Manager</title>
+
+  <style>
+    .completed {
+      color: gray;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">My Task Manager</h1>
+
+  <input id="task-input" type="text" placeholder="Enter a task">
+
+  <button id="add-button">Add Task</button>
+  <button id="clear-button">Clear All</button>
+
+  <p id="message"></p>
+
+  <ul id="task-list">
+    <li>Learn JavaScript</li>
+    <li>Practice DOM</li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
