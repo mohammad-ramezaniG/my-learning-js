@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Task Manager</title>
+
+    <style>
+        .completed {
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        button {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Interactive Task Manager</h1>
+
+    <input
+        id="task-input"
+        type="text"
+        placeholder="Enter a task"
+    >
+
+    <button id="add-button">Add Task</button>
+
+    <p id="message"></p>
+
+    <ul id="task-list"></ul>
+
+    <section>
+        <p>Total tasks: <span id="total-count">0</span></p>
+        <p>Completed: <span id="completed-count">0</span></p>
+        <p>Remaining: <span id="remaining-count">0</span></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
