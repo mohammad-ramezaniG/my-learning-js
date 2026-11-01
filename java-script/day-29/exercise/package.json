@@ -1,0 +1,15 @@
+{
+  "name": "day-31",
+  "version": "1.0.0",
+  "description": "Project Genesis Day 31",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
