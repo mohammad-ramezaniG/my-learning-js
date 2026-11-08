@@ -1,80 +1,95 @@
-function multiply(num1 , num2) {
-    
-    return num1 * num2;
+
+//تمرین 1
+function executeOperation(num1 ,num2 ,callback) {
+    return callback(num1 , num2);
 }
 
-const calculate = multiply;
-
-console.log(calculate(5 , 10));
-
 function sum(num1 , num2) {
-
     return num1 + num2;
 }
 
-function subtract(num1 , num2) {
-    
+function multiply(num1  , num2) {
+    return num1 * num2;
+}
+
+function subtraction(num1 , num2 ) {
     return num1 - num2;
 }
 
-function executeOperation(num1 , num2 , excutor) {
-    return excutor(num1 , num2);
+console.log(executeOperation(10 , 20 , sum));
+console.log(executeOperation(10 , 20 , multiply));
+console.log(executeOperation(10 , 20 , subtraction));
+
+
+//تمرین 2
+function processUser(name ,callback) {
+    return callback(name);
 }
 
-console.log(executeOperation(5, 20, sum));
-console.log(executeOperation(14 , 29 , multiply));
+function upperCase(name) {
+    return name.toUpperCase();
+}
 
-const array = [
-    multiply,
-    sum,
-    subtract
-]
+function length1(name) {
+    return name.length;
+}
 
-console.log(array[0](10, 50));
-console.log(array[1](10, 20));
-console.log(array[2](10, 50));
+function wellcome(name) {
+    return `Hello ${name}`;
+}
 
+console.log(processUser("Mohammad" , upperCase));
+console.log(processUser("Mohammad" , length1));
+console.log(processUser("Mohammad" , wellcome));
 
-const prices = [100, 200, 300, 400, 500];
+//تمرین 3
+const x = 30;
 
-const newPrice = prices.map(function (number) {
-    return number + (number/5);
-});
+//چون داخلی ترین متغیره
 
-const numbers = [12, 7, 25, 30, 9, 42, 18, 5];
-
-const newNumbers = numbers.filter(function (number) {
-    return number >= 15;
-});
-
-const expenses = [120, 250, 80, 450, 100];
-
-const totalExpenses = expenses.reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue
-} , 0);
-
-const numbers2 = [2, 5, 8, 11, 14, 17, 20];
-
-const newNumbers2 = numbers2
-    .filter(function (number) {
-        return (number % 2) === 0;
-    })
-    .map(function (number) {
-        return number * 3;
-    })
-
-function processArray(array, callback) {
-    const result = [];
-
-    for (const element of array) {
-        result.push(callback(element));
+//تمرین 4
+function createMultiplier(num1) {
+    return function multiply(num2) {
+        return num1 * num2
     }
+};
 
-    return result;
+const double = createMultiplier(2);
+// double = function multiply(num2) {
+//       return 2 * num2
+//   }
+
+console.log(double(5));
+console.log(double(10));
+
+
+//تمرین 5
+function createScoreManager(firstCount) {
+    let score = firstCount;
+
+    return {
+        addScore(amount) {
+            score += amount;
+        },
+
+        removeScore(amount) {
+            if (amount <= score) {
+                score -= amount;
+            }
+        },
+
+        getScore() {
+            return score;
+        }
+    }
 }
 
-function multiply2(number) {
-    return number * 3;
-}
+const scoreManager = createScoreManager(1000);
 
-console.log(processArray(numbers2, multiply2));
+scoreManager.addScore(100);
+
+console.log(scoreManager.getScore()); // 1100
+
+scoreManager.removeScore(200);
+
+console.log(scoreManager.getScore()); // 900
